@@ -14,6 +14,7 @@ class CustomCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        containerView.layer.cornerRadius = 6
+        containerView.layer.masksToBounds = true
     }
 }

@@ -31,10 +31,10 @@ class CustomFlowLayout: UICollectionViewLayout {
         let insets = collectionView.contentInset
         return collectionView.bounds.width - (insets.left + insets.right)
     }
-
+    
     override var collectionViewContentSize: CGSize {
-    return CGSize(width: contentWidth, height: contentHeight)
-  }
+        return CGSize(width: contentWidth, height: contentHeight)
+    }
   
     override func prepare() {
         guard cache.isEmpty == true, let collectionView = collectionView else {
@@ -44,7 +44,7 @@ class CustomFlowLayout: UICollectionViewLayout {
         let columnWidth = contentWidth / CGFloat(numberOfColumns)
         var xOffset: [CGFloat] = []
         for column in 0..<numberOfColumns {
-          xOffset.append(CGFloat(column) * columnWidth)
+            xOffset.append(CGFloat(column) * columnWidth)
         }
         var column = 0
         var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
