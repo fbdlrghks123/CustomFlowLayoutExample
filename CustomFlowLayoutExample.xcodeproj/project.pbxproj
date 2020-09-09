@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,8 @@
 		D36D3DBB2508BE6E00A709DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36D3DB92508BE6E00A709DF /* Main.storyboard */; };
 		D36D3DBD2508BE6F00A709DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36D3DBC2508BE6F00A709DF /* Assets.xcassets */; };
 		D36D3DC02508BE6F00A709DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36D3DBE2508BE6F00A709DF /* LaunchScreen.storyboard */; };
-		D36D3DC92508BEFE00A709DF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D36D3DC82508BEFE00A709DF /* Then */; };
+		D36D3DCE2508C57F00A709DF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D3DCD2508C57F00A709DF /* CustomCell.swift */; };
+		D36D3DD02508C5B100A709DF /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D3DCF2508C5B100A709DF /* CustomFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		D36D3DBC2508BE6F00A709DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36D3DBF2508BE6F00A709DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36D3DC12508BE6F00A709DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36D3DCD2508C57F00A709DF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		D36D3DCF2508C5B100A709DF /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36D3DC92508BEFE00A709DF /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,15 +60,41 @@
 		D36D3DB22508BE6E00A709DF /* CustomFlowLayoutExample */ = {
 			isa = PBXGroup;
 			children = (
+				D36D3DCC2508C56400A709DF /* View */,
+				D36D3DCB2508C53F00A709DF /* ViewControllers */,
+				D36D3DCA2508C53B00A709DF /* Layout */,
 				D36D3DB32508BE6E00A709DF /* AppDelegate.swift */,
 				D36D3DB52508BE6E00A709DF /* SceneDelegate.swift */,
-				D36D3DB72508BE6E00A709DF /* ViewController.swift */,
 				D36D3DB92508BE6E00A709DF /* Main.storyboard */,
 				D36D3DBC2508BE6F00A709DF /* Assets.xcassets */,
 				D36D3DBE2508BE6F00A709DF /* LaunchScreen.storyboard */,
 				D36D3DC12508BE6F00A709DF /* Info.plist */,
 			);
 			path = CustomFlowLayoutExample;
+			sourceTree = "<group>";
+		};
+		D36D3DCA2508C53B00A709DF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D36D3DCF2508C5B100A709DF /* CustomFlowLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		D36D3DCB2508C53F00A709DF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D36D3DB72508BE6E00A709DF /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D36D3DCC2508C56400A709DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D36D3DCD2508C57F00A709DF /* CustomCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,7 +114,6 @@
 			);
 			name = CustomFlowLayoutExample;
 			packageProductDependencies = (
-				D36D3DC82508BEFE00A709DF /* Then */,
 			);
 			productName = CustomFlowLayoutExample;
 			productReference = D36D3DB02508BE6E00A709DF /* CustomFlowLayoutExample.app */;
@@ -117,7 +144,6 @@
 			);
 			mainGroup = D36D3DA72508BE6E00A709DF;
 			packageReferences = (
-				D36D3DC72508BEFE00A709DF /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = D36D3DB12508BE6E00A709DF /* Products */;
 			projectDirPath = "";
@@ -149,6 +175,8 @@
 				D36D3DB82508BE6E00A709DF /* ViewController.swift in Sources */,
 				D36D3DB42508BE6E00A709DF /* AppDelegate.swift in Sources */,
 				D36D3DB62508BE6E00A709DF /* SceneDelegate.swift in Sources */,
+				D36D3DD02508C5B100A709DF /* CustomFlowLayout.swift in Sources */,
+				D36D3DCE2508C57F00A709DF /* CustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,25 +374,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D36D3DC72508BEFE00A709DF /* XCRemoteSwiftPackageReference "Then" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/Then.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D36D3DC82508BEFE00A709DF /* Then */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D36D3DC72508BEFE00A709DF /* XCRemoteSwiftPackageReference "Then" */;
-			productName = Then;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D36D3DA82508BE6E00A709DF /* Project object */;
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Then
 
 class ViewController: UIViewController {
 
@@ -15,9 +14,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if let layout = collectionView?.collectionViewLayout as? CustomFlowLayoutExample {
+            layout.delegate = self
+        }
+        
+        collectionView?.backgroundColor = .clear
+        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
     }
-
-
 }
-
